@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/global.css">
+    <style>
+        #nav,
+        #mtop,
+        #content {
+            width: 985px;
+            /*内容固定宽度*/
+            margin: 0px auto;
+            /*固定宽度且居中*/
+        }
+
+        #middle #allnav {
+            width: 100%;
+            /*自适应宽度，占据整个屏幕*/
+            height: 39px;
+            background-color: #ff7701;
+        }
+
+        /*中间导航*/
+        #middle #nav {
+            height: 39px;
+        }
+
+        #nav ul li {
+            float: left;
+        }
+
+        #nav ul li a {
+            float: left;
+            /*兼容ie6*/
+            padding: 0px 16px;
+            height: 39px;
+            line-height: 39px;
+            display: block;
+            font-weight: bold;
+            font-size: 15px;
+            color: white;
+        }
+
+        #nav ul li a:hover {
+            background-color: #ff8c00
+        }
+
+        #nav ul li a.category {
+            background-image: url(images/arrow-down.gif);
+            background-repeat: no-repeat;
+            background-position: right;
+        }
+
+        /*导航菜单的二级菜单用到定位*/
+        #nav ul li.menuList {
+            position: relative;
+        }
+
+        #nav ul li.menuList ul {
+            background-color: #ff7701;
+            text-align: center;
+            top: 39px;
+            display: none;
+            /*脱离原文档流*/
+            position: absolute;
+            width: 123px;
+        }
+
+        #nav ul li.menuList:hover ul {
+            display: block;
+        }
+
+        #nav ul li ul li {
+            float: none;
+
+        }
+
+        #nav ul li ul li a {
+            float: none
+        }
+
+        #mtop {
+            overflow: hidden;
+            /*解决浮动塌陷*/
+            margin-bottom: 4px;
+            /*下外边距 和中下保持4px的间隔*/
+        }
+
+        #content {
+            width: 984px;
+            margin-top: 10px;
+            border: 1px solid greenyellow;
+
+        }
+
+        .ordertable,
+        .have {
+            margin-bottom: 18px;
+            padding: 16px;
+            height: auto;
+            overflow: hidden;
+            border: 1px solid black;
+        }
+
+        .g1 {
+            height: 78px;
+            background: url(images/cart/step1.jpg) no-repeat;
+            background-position: 267px 22px;
+            font-size: 20px;
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            border: 1px solid grey;
+        }
+
+        table tr th {
+            width: 84px;
+            height: 50px;
+        }
+
+        .th2 {
+            width: 222px;
+        }
+
+        tr td {
+            height: 60px;
+        }
+
+
+        tr {
+            border-bottom: 1px dashed grey;
+        }
+
+        .last_td div {
+            float: right;
+        }
+
+        .last_td span {
+            font-size: 20px;
+            font-weight: bold;
+            color: #ff7701;
+        }
+
+        table dt {
+            float: left;
+            margin-right: 5px;
+        }
+
+        dd {
+
+            padding-left: 5px;
+        }
+
+        .have span {
+            font-size: 20px;
+        }
+
+        table .input {
+            margin: 3px;
+            width: 65px;
+            height: 25px;
+            text-align: center;
+        }
+
+        table input {
+            width: 15px;
+            height: 15px;
+            vertical-align: middle;
+        }
+
+        div#adv {
+            position: fixed;
+            top: 300px;
+            right: 0px;
+
+        }
+
+        .have dl {
+            margin-right: 22px;
+            float: left;
+            width: 208px;
+        }
+
+        .have dd {
+            margin-top: 5px;
+        }
+
+        .have dd span {
+            font-size: 20px;
+            font-weight: bold;
+            color: rgba(160, 22, 22, 0.841);
+        }
+
+        .have dd:nth-child(5) span {
+            font-size: 14px;
+            color: #ff7701;
+        }
+
+        .space  {
+            background-image: url(images/icon.gif);
+            width: 18px;
+            height: 33px;
+            background-position: 0px -85px;
+            display: block;
+            float: left;
+        }
+    </style>
+</head>
+
+<body>
+    <iframe src="head.html" width="100%" height="104" scrolling="no" frameborder="0"></iframe>
+    <div id="middle">
+        <div id="allnav">
+            <div id="nav">
+                <ul>
+                    <li class="menuList"><a href="#" class="category">全部商品分类</a>
+                        <ul>
+                            <!--二级菜单-->
+                            <li><a href="#">美食</a></li>
+                            <li><a href="#">旅游</a></li>
+                            <li><a href="#">酒店</a></li>
+                            <li><a href="#">电影</a></li>
+                            <li><a href="#">KTV</a></li>
+                            <li><a href="#">时尚</a></li>
+                            <li><a href="#">生活服务</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">首页</a></li>
+                    <li><a href="#">团购</a></li>
+                    <li><a href="#">美食</a></li>
+                    <li><a href="#">电影</a></li>
+                    <li><a href="#">KTV</a></li>
+                    <li><a href="#">酒店订票</a></li>
+                    <li><a href="#">购物</a></li>
+                    <li><a href="#">品牌特卖</a></li>
+                </ul>
+            </div>
+        </div>
+        <div id="mtop">
+            <div id="content">
+                <div class="ordertable">
+                    <div class="g1"><img src="images/cart/g1.jpg" alt=""><span>我的购物车</span></div>
+                    <form action="#" method="post">
+                        <table cellpadding="0" cellspacing="0">
+                            <tr>
+                                <th><input type="checkbox">全选</th>
+                                <th class="th2">项目</th>
+                                <th>状态</th>
+                                <th class="th2">类型/数量</th>
+                                <th>单价</th>
+                                <th style="margin-right: 10px;">小计</th>
+                                <th></th>
+                            </tr>
+                            <tr>
+                                <td><input type="checkbox"></td>
+                                <td>
+                                    <dl>
+                                        <dt><img src="images/cart/item1.jpg" alt=""> </dt>
+                                        <dd style="text-align: left;">欢乐空间两贩KTV：欢唱套餐2选1，国家法定节假日需到店另付20元，可升级</dd>
+                                    </dl>
+                                </td>
+                                <td>可购买</td>
+                                <td><input type="button" value="-"><input type="text" value="1" class="input"><input
+                                        type="button" value="+"></td>
+                                <td><span>¥39.9</span></td>
+                                <td><span>¥39.9</span></td>
+                                <td>删除</td>
+                            </tr>
+                            <tr>
+                                <td><input type="checkbox"></td>
+                                <td>
+                                    <dl>
+                                        <dt><img src="images/cart/item2.jpg" alt=""> </dt>
+                                        <dd style="text-align: left;">欢乐空间两贩KTV：欢唱套餐2选1，国家法定节假日需到店另付20元，可升级</dd>
+                                    </dl>
+                                </td>
+                                <td>可购买</td>
+                                <td><input type="button" value="-"><input type="text" value="1" class="input"><input
+                                        type="button" value="+"></td>
+                                <td><span>¥3</span></td>
+                                <td><span>¥3</span></td>
+                                <td>删除</td>
+                            </tr>
+                            <tr>
+                                <td colspan="7" class="last_td">
+                                    <div>已选<span>2</span>件商品应付总额：<span>¥42.9</span> </div>
+                                </td>
+                            </tr>
+                        </table>
+                        <input type="image" src="images/cart/tj.png" style="float: right;">
+                    </form>
+                </div>
+                <div class="have">
+                    <span style="display: block;">购买了本团购的用户还看了</span>
+                    <dl>
+                        <dt><img src="images/cart/view1.jpg"></dt>
+                        <dd>【西北湖】金鲨国际美食百汇：自助晚</dd>
+                        <dd>餐1位，西北湖店需到店补差价...</dd>
+                        <dd><span>¥118</span>门店价168 <label style="float: right;">已售<span>1691</span></label></dd>
+                        <dd style="float: right;"><label class="space"></label><span>加入购物车</span></dd>
+                    </dl>
+                    <dl>
+                        <dt><img src="images/cart/view1.jpg"></dt>
+                        <dd>【台北路】金鲨国际美食百汇：自助晚</dd>
+                        <dd>餐1位，西北湖店需到店补差价...</dd>
+                        <dd><span>¥109</span>门店价168 <label style="float: right;">已售<span>2169</span></label></dd>
+                        <dd style="float: right;"><label class="space"></label><span>加入购物车</span></dd>
+                    </dl>
+                    <dl>
+                        <dt><img src="images/cart/view1.jpg"></dt>
+                        <dd>【西北湖】金鲨国际美食百汇：自助晚</dd>
+                        <dd>餐1位，西北湖店需到店补差价...</dd>
+                        <dd><span>¥198</span>门店价168 <label style="float: right;">已售<span>349</span></label></dd>
+                        <dd style="float: right;"><label class="space"></label><span>加入购物车</span></dd>
+                    </dl>
+                    <dl>
+                        <dt><img src="images/cart/view1.jpg"></dt>
+                        <dd>【西北湖】金鲨国际美食百汇：自助晚</dd>
+                        <dd>餐1位，西北湖店需到店补差价...</dd>
+                        <dd><span>¥118</span>门店价299 <label style="float: right;">已售<span>245</span></label></dd>
+                        <dd style="float: right;"><label class="space"></label><span>加入购物车</span></dd>
+                    </dl>
+                </div>
+            </div>
+        </div>
+        <iframe src="foot.html" width="100%" scrolling="no" frameborder="0" height="185"></iframe>
+        <div id="adv">
+            <img src="images/ban.jpg" width="100" ;>
+        </div>
+</body>
+
+</html>

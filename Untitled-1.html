@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    #nav,
+        #mtop,
+        #content {
+            width: 985px;
+            /*内容固定宽度*/
+            margin: 0px auto;
+            /*固定宽度且居中*/
+        }
+
+        #middle #allnav {
+            width: 100%;
+            /*自适应宽度，占据整个屏幕*/
+            height: 39px;
+            background-color: #ff7701;
+        }
+
+        /*中间导航*/
+        #middle #nav {
+            height: 39px;
+        }
+
+        #nav ul li {
+            float: left;
+            list-style-type: none;
+        }
+
+        #nav ul li a {
+            float: left;
+            /*兼容ie6*/
+            padding: 0px 16px;
+            height: 39px;
+            line-height: 39px;
+            display: block;
+            font-weight: bold;
+            font-size: 15px;
+            color: white;
+        }
+
+        #nav ul li a:hover {
+            background-color: #ff8c00
+        }
+
+        #nav ul li a.category {
+            background-image: url(images/arrow-down.gif);
+            background-repeat: no-repeat;
+            background-position: right;
+        }
+
+        /*导航菜单的二级菜单用到定位*/
+        #nav ul li.menuList {
+            position: relative;
+        }
+
+        #nav ul li.menuList ul {
+            background-color: #ff7701;
+            text-align: center;
+            top: 39px;
+            display: none;
+            /*脱离原文档流*/
+            position: absolute;
+            width: 123px;
+        }
+
+        #nav ul li.menuList:hover ul {
+            display: block;
+        }
+
+        #nav ul li ul li {
+            float: none;
+
+        }
+
+        #nav ul li ul li a {
+            float: none
+        }
+        #mun{
+            width: 985px;
+            height: 800px;
+            border: solid 1px rgba(112, 112, 112, 0.348);
+            margin: auto;
+            margin-top: 15px;
+        }
+        #gl{
+            width: 700px;
+            height: 700px;
+            border: solid 1px rgb(136, 134, 134);
+            float: left;
+        }   
+        #side{
+            width: 270px;
+            height: 700px;
+            border: solid 1px rgba(133, 130, 130, 0.567);
+            float: right;
+        } 
+        #mun1{
+            height: 60px;
+            background: url(images/cart/step2.jpg) no-repeat;
+            background-position:10px 10px
+            
+        }
+        #mun2{
+            width: 680px;
+            height: 150px;
+            margin: auto;
+            
+        }
+        h2{
+            font-size: 25px;
+            color: rgba(121, 121, 121, 0.927);
+        }.input{
+        
+        width: 100px;
+        height: 40px;
+    }
+    
+        #mun3{
+            width: 680px;
+            height: 100px;
+            margin: auto;
+            
+        }
+        #xun1{
+            height: 1px;
+            width: 680px;
+            border-top: 1px dashed rgba(146, 145, 145, 0.907);
+        }
+        h3 span{
+            font-size: 15px;
+            color: #ff7701;
+        }
+    h3{
+        font-size: 15px;
+    }
+    #xun2{
+            height: 1px;
+            width: 680px;
+            border-top: 1px dashed rgba(146, 145, 145, 0.907);
+        }
+        #mun4{
+            width: 680px;
+            height: 150px;
+            margin: auto;
+            
+        }
+        .zhi{
+            font-size: 25px;
+            color: rgba(121, 121, 121, 0.927);
+        }
+        ul.cash{
+            list-style: none;
+        }
+        ul.cash li span{
+            background-image: url(images/cart/jt1.jpg);
+            width: 15px; height: 13px;
+           float: left;
+    }
+    .input-radio{
+        margin: lem 0;
+        display: inline-block;
+        
+    } 
+    .input-radio input[type="radio"]{
+        opacity: 0;
+    }
+    .input-radio input[type="radio"]+label{
+        position: relative;
+        cursor: pointer;
+
+            display: block;
+            margin-top: 5px;
+        }
+        ul.cash li{
+            line-height: 25px;
+            height: 25px;
+            overflow: hidden;
+        }
+        ul.cash li:hover{
+            height: auto;
+            cursor: pointer;
+        }
+        ul.cash li:hover span{
+            background-image: url(images/cart/jt2.jpg);
+        }
+        #mun5{
+            width: 150px;
+            height: 100px;
+            
+            float: right;
+        }
+        h4{
+            text-align: right;
+        }
+        #zhuho1{
+            
+    padding-left: 17px;
+     padding-right: 17px;
+     height: 300px;
+    
+        }
+        #zhuho2{
+            
+    padding-left: 17px;
+     padding-right: 17px;
+     height: 300px;
+        }
+        #mad
+    {
+        width: 55px;
+        height: 55px;
+        
+        background-image: url(images/cart/warn.jpg);
+        float: left;
+    }
+    #mad1
+    {
+        width: 170px;
+        height: 55px;
+        
+        font-size: 13px;
+        float: right;
+    }
+    #mad2
+    {
+        width: 55px;
+        height: 52px;
+        float: left;
+        margin-top: 10px;
+        background-image: url(images/cart/ie.jpg);
+        }
+    #mad3
+    {
+        width: 170px;
+        height: 55px;
+        float: right;
+        font-size: 13px;
+        margin-top: 10px;
+    }
+    dl,dd{
+        padding: 0px; margin: 0px;
+    }
+    dl.help{
+        height: 30px;
+        overflow: hidden;
+        width: 237px;
+    }
+    dl.help dt{
+        height: 30px;
+        line-height: 30x;
+        font-size: 13px
+    }
+    dl.help:hover{
+        height: auto;
+        cursor: pointer;
+    }
+    dl.help dd{
+        color: #999;
+        font-size: 12px0;
+    }
+h5{
+    font-size: 30px;
+}
+.vad{
+    list-style-type: circle;
+}
+</style>
+<body>
+    <iframe src="head.html" width="100%" height="104" scrolling="no" frameborder="0"></iframe>
+    <div id="middle">
+        <div id="allnav">
+            <div id="nav">
+                <ul>
+                    <li class="menuList"><a href="#" class="category">全部商品分类</a>
+                        <ul>
+                            <!--二级菜单-->
+                            <li><a href="#">美食</a></li>
+                            <li><a href="#">旅游</a></li>
+                            <li><a href="#">酒店</a></li>
+                            <li><a href="#">电影</a></li>
+                            <li><a href="#">KTV</a></li>
+                            <li><a href="#">时尚</a></li>
+                            <li><a href="#">生活服务</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">首页</a></li>
+                    <li><a href="#">团购</a></li>
+                    <li><a href="#">美食</a></li>
+                    <li><a href="#">电影</a></li>
+                    <li><a href="#">KTV</a></li>
+                    <li><a href="#">酒店订票</a></li>
+                    <li><a href="#">购物</a></li>
+                    <li><a href="#">品牌特卖</a></li>
+                </ul>
+            </div>
+        </div>
+        <div id="mun">
+            <div id="gl">
+                <div id="mun1"></div>
+                <div id="mun2">
+                    <h2>项目名称及数量：</h2>
+                    <ul class="vad">
+                      <li>  欢乐空间量贩试KTV:欢唱套餐2选1,国家法定节假日需到另外付20元,共一份
+                    </li>
+                    <li>
+                        途乐时尚主题量贩试KTV:任选1小时欢唱,可升级,提供免费wife,共一份</li>
+                    </ul>
+                    <div id="xun1"></div>
+                    <div id="mun3">
+                        <h2>接美淘劵密码的手机号：</h2>
+                        <h3><span>130****4939,</span>凭美淘劵密码去商家消费。</h3>
+                    </div>
+                    <div id="xun2"></div>
+                    <div id="mun4">
+                        
+                            <h3>应付总金额<span>￥43.9</span></h3>
+                            <ul class="cash">
+                                <li><span><img src="images/cart/jt1.jpg" ></span>网上银行支付（支持储蓄卡和信用卡）<br/>
+                                    <input type="radio" name="bank" checked="checked"/>
+                                    <img src="images/cart/jhbank.jpg" align="middle"/>
+                                    <input type="radio" name="bank"/>
+                                    <img src="images/cart/jtbank.jpg" align="middle"/>
+                                    <input type="radio" name="bank"/>
+                                    <img src="images/cart/zgbank.jpg" align="middle"/><br/>
+                                    <input type="radio" name="bank"/>
+                                    <img src="images/cart/xybank.jpg" align="middle"/>
+                                    <input type="radio" name="bank"/>
+                                    <img src="images/cart/zsbank.jpg" align="middle"/>
+                                    <input type="radio" name="bank"/>
+                                    <img src="images/cart/gdbank.jpg" align="middle"/>
+                                   </li>
+                                    <li><span><img src="images/cart/jt1.jpg" ></span>支付宝、财付通支付<br/>
+                                    <input type="radio" name="other"/>
+                                    <img src="images/cart/zfb.jpg"   align="middle"/>
+                                    <input type="radio" name="other"/>
+                                    <img src="images/cart/cft.jpg"   align="middle"/></li>
+                            </ul></div>
+                            <div id="mun5">
+                                <h4>去支付：￥42.9</h4>
+                                <img src="images/cart/fk.jpg"/>
+                            </div>
+                        
+                    
+
+                </div>
+            </div>
+
+            <div id="side">
+                <div id="zhuho1">
+                    <h5>请放心购买</h5>
+        <div id="mad"></div>
+        <div id="mad1">
+            采用网银和第三方平台支付，最大限度保证您支付安全。
+        </div>
+        <div id="mad2"></div>
+        <div id="mad3">
+            为了支付便捷,建议Windows用户使用IE浏览器支付
+        </div> </div>
+        <div id="zhuho2">
+        <h5>支付帮助？</h5>
+        <dl class="help">
+            <dt>没有开通网上银行如何购买？</dt>
+            <dd>各银行已有支持无需网银的小额支付产品，可直接选择付款。或者，可选择银联在线支付或快捷支付(只支持信用卡)付款。</dd>
+        </dl>
+        <dl class="help">
+<dt>没有找到我常用的网上银行？</dt>
+<dd>建议选择银联在线支付付款，支持超过180家银行，包括主流银行和地方银行，如华夏银行，汉口银行和南京银行等等。</dd>
+<!==其它的问题和解答不算==>
+
+        </dl>
+        <dl class="help">
+            <dt>什么是地方银行？</dt>
+            <dd>建议选择银联在线支付付款，支持超过180家银行，包括主流银行和地方银行，如华夏银行，汉口银行和南京银行等等。</dd>
+            <!==其它的问题和解答不算==>
+            
+                    </dl>
+                    <dl class="help">
+                        <dt>无法跳转到对应的支付界面支付？</dt>
+                        <dd>建议选择银联在线支付付款，支持超过180家银行，包括主流银行和地方银行，如华夏银行，汉口银行和南京银行等等。</dd>
+                        <!==其它的问题和解答不算==>
+                        
+                                </dl></div>
+               
+            </div>
+</div>
+</body>
+</html>

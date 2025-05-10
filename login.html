@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="CSS/login.css" rel="stylesheet" type="text/css">
+
+    <title>用户登录注册页</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body{
+	     font-size: 12px;
+        }
+        a{
+            text-decoration: none;
+            color: black;
+        }
+        table{
+            margin-left: 16px;
+        }
+
+        #content{
+            width: 985px;
+            margin: 0 auto;
+        }
+        #content div{
+            float: left;
+        }
+        #register{
+            width: 550px;
+            height: 370px;
+        }
+        #content #register fieldset{
+            height: 370px;
+        }
+        #content #register #box{
+            background-color: #fafafa;
+            height: 309px;
+            overflow: hidden;
+        }
+        #content #register #box #phonereg{
+            height: 308px;
+        }
+        #content #login #box2{
+            background-color: #fafafa;
+            height: 139px;
+            overflow: hidden;
+        }
+        #content #login fieldset{
+            height: 200px;
+        }
+        #login{
+            width: 350px;
+            margin-left: 50px;
+        }
+
+        .eamil{
+            background-color: #f8bc2d;
+            border: 3px solid #f88c00;
+            color: #fff;
+        }
+        .txt{
+            height: 23px;
+            border: 2px solid #b7bfce;
+        }
+        .txt2{
+            height: 23px;
+            border: 2px solid #b7bfce;
+
+        }
+        .txt3{
+            height: 23px;
+            width: 100px;
+            border: 2px solid #b7bfce;
+
+        }
+        .last{
+            float: left;
+            height: 34px;
+            line-height: 34px;
+        }
+
+    .bg2{
+    background-color: #ff7001;
+}
+.nav{
+    height: 40px;
+    width: 985px;      
+    margin: 0 auto;
+    background-color: #ff7001;
+    margin-bottom: 15px;
+}
+.nav ul li{
+    list-style: none;
+}
+.nav ul li a{
+    color: white;
+    text-decoration: none;
+    line-height: 39px;
+    padding: 0 16px;
+    font-size: 15px;
+    float: left;
+    font-weight: bold;
+}
+.nav ul li a.cate{
+    background-image: url(../images/arrow-down.gif);
+    background-repeat: no-repeat;
+    background-position: right;
+}
+.nav ul li a:hover{
+   background-color: #ff8c00;
+}
+
+.mtop{
+    overflow: hidden;
+    margin-bottom: 4px;
+}
+.nav ul li.menulist{
+    position: relative;
+}
+.nav ul li.menulist ul li a{
+    text-align: center;
+    width: 90px;
+    clear: both;
+}
+.menulist ul{
+    background-color: #ff7001;
+    position: absolute;
+    top: 39px;
+    display: none;
+}
+.menulist:hover ul#erji{
+    display: block;
+}
+
+
+#content form fieldset {
+    border: 1px solid #e0e0e0; 
+    
+}
+#content form fieldset legend {
+    font-size: 20px;
+    font-weight: bold;
+    color: #F90;    
+    margin-left: 20px;
+}
+#content form fieldset p {
+    margin:10px 0px 10px 20px;  
+}
+#content form fieldset label {
+    width: 90px;      
+    text-align: right;  
+    display: block;   
+    float: left;
+    height: 23px;  
+    line-height: 23px; 
+    color: grey;
+    font-size: 14px;
+}
+#content fieldset ul{
+    height: 48px;
+    margin-top: -12px;
+}
+#content #register fieldset ul{
+    width: 550px;
+}
+#content fieldset ul li{
+    float: left;
+    list-style: none;
+    font-size: 20px;
+    margin-top: 14px;
+    margin-left: 10px;
+
+}
+#content fieldset ul li input{
+    width: 90px;
+    height: 28px;
+}
+#content #register fieldset p span{
+    font-size: 12px;
+}
+
+
+
+#content ul li a{
+    display: block;
+    width: 75px;
+    height: 25px;
+    font-size: 13px;
+    background-image: url(../images/gray.gif);
+    line-height: 25px;
+    text-align: center;
+}
+#content ul li a:hover{
+    color: #ff7001;
+}
+#content ul li a.current{
+    background-image: url(../images/current.gif);
+}
+
+#content #register #box #phonereg p{
+    margin-top: 25px;
+
+}
+#top div{
+    float: left;
+}
+#top div ul li{
+    float: left;
+}
+#top div ul li a{
+    display: block;
+    color: #fff;
+    height: 70px;
+    padding: 0 10px;
+    line-height: 70px;
+}
+#top div ul li a:hover{
+    background-color: #676767;
+}
+#top #in{
+    margin-top: 27px;
+    margin-left: 100px;
+    font-size: 13px;
+    color: #fff;
+}
+#top #in a{
+    color: orange;
+}
+
+#mid .zt{
+    background-image: url(../images/topic/ztbg.jpg);
+    height: 50px;
+}
+#mid .zt h3{
+    height: 50px;
+    line-height: 50px;
+    margin-left: 42px;
+    color: #fff;
+}
+#mid dl{
+    width: 312px;
+    height: 280px;
+    padding: 9px;
+    border: 1px solid #d3d3d3;
+    float: left;
+    margin-right: 9px;
+    margin-bottom: 10px;
+}
+#mid dl.three{
+    margin-right: 0px;
+}
+#mid dl dd{
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+#mid dl dd span{
+    font-size: 20px;
+    color: #efa623;
+}
+#mid dl dd.weit{
+    font-weight: bold;
+    font-size: 16px;
+}
+#mid dl dd.num1{
+    float: left;
+}
+#mid dl dd.num2{
+</style>
+</head>
+<body>
+    <iframe src="head.html" width="100%" height="103" frameborder="0" scrolling="no"></iframe>
+
+    <div class="bg2">
+        <div class="nav">
+            <ul>
+                <li class="menulist">
+                    <a href="#" class="cate">全部商品分类</a>
+                    <ul id="erji">
+                        <li><a href="#">美食</a></li>
+                        <li><a href="#">旅游</a></li>
+                        <li><a href="#">酒店</a></li>
+                        <li><a href="#">电影</a></li>
+                        <li><a href="#">KTV</a></li>
+                        <li><a href="#">时尚</a></li>
+                        <li><a href="#">生活服务</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">首页</a></li>
+                <li><a href="#">团购</a></li>
+                <li><a href="#">美食</a></li>
+                <li><a href="#">电影</a></li>
+                <li><a href="#">KTV</a></li>
+                <li><a href="#">酒店订票</a></li>
+                <li><a href="#">购物</a></li>
+                <li><a href="#">品牌特卖</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div id="content">
+        <div id="register">
+            <form>
+                <fieldset>
+                    <legend>注册新用户</legend>
+                    <ul>
+                        <li>
+                            <a href="#emailreg" class="current">邮箱注册</a>
+                        </li>
+                        <li>
+                            <a href="#phonereg">手机注册</a>
+                        </li>
+                    </ul>
+
+                    <div id="box">
+                        <div id="emailreg">
+                            <p>
+                                <label for="userEamil" accesskey="n" >邮箱：</label>
+                                <input type="text" id="userEamil" class="txt" />
+                                <span>推荐使用qq邮箱</span>
+                           </p>
+                            <p>
+                                <label for="userName1" accesskey="p" >用户名：</label>
+                                <input type="text" id="userName1" class="txt"  />
+                                <span>4-16字符，不能包含数字</span>
+                            </p>
+                            <p>
+                                <label for="usermm" accesskey="n" >创建密码：</label>
+                                <input type="password" id="usermm" class="txt" />
+                                <span>6-32字符</span>
+                            </p>
+                            <p>
+                                <label for="qrmm" accesskey="p" >确认密码：</label>
+                                <input type="password" id="qrmm" class="txt"  />
+                                <span>请再次输入密码</span>
+                            </p>
+                            <p>
+                                <label>所在城市：</label>
+                                <select class="txt2">
+                                    <option>--省--</option>
+                                    <option>湖北省</option>
+                                </select>
+                                <select class="txt2">
+                                    <option>--市区--</option>
+                                    <option>武汉市</option>
+                                </select>
+                            </p>
+                            <p>
+                                <table>
+                                    <tr>
+                                        <td id="one"><label for="test" accesskey="n" >验证码：</label></td>
+                                        <td><input type="text" id="test" class="txt3" /></td>
+                                        <td><img src="images/code_img.gif"/></td>
+                                    </tr>
+        
+                                </table>                                                                 
+                            </p>
+                            <p class="last">
+                                <input type="image" class="btn" src="images/register.jpg"/>
+                            </p>
+                            <p class="last">
+                                <a href="#">《美淘网用户协议》</a>
+                            </p>
+                    
+                            <div id="phonereg">
+                                <p>
+                                    <label for="userPhone" accesskey="n" >电话：</label>
+                                    <input type="text" id="userPhone" class="txt" />
+                                    <span>用于登陆,找回密码,不会公开</span>
+                               </p>
+                                <p>
+                                    <label for="useryan" accesskey="p" >短信验证码：</label>
+                                    <input type="text" id="useryan" class="txt"  />
+                                    <span>请输入手机收到的验证码</span>
+                                </p>
+                                <p>
+                                    <label for="userpmm" accesskey="n" >创建密码：</label>
+                                    <input type="password" id="userpmm" class="txt" />
+                                    <span>6-32字符可使用数字,符号,字母</span>
+                                </p>
+                                <p>
+                                    <label for="qrmm" accesskey="p" >确认密码：</label>
+                                    <input type="password" id="qrmm" class="txt"  />
+                                    <span>请再次输入密码</span>
+                                </p>
+
+                                <p class="last">
+                                    <input type="image" class="btn" src="images/register.jpg"/>
+                                </p>
+                                <p class="last">
+                                    <a href="#">《美淘网用户协议》</a>
+                                </p>
+    
+                            </div>
+                        </div>
+ 
+                    </div>
+                    
+                </fieldset>
+            </form>
+                
+
+        </div>
+
+        <div id="login">
+            <form> 
+                <fieldset>    
+                    <legend>登录MEITAO.COM</legend>
+                    <ul>
+                        <li>
+                            <a href="#emailin" class="current">邮箱用户</a>
+                        </li>
+                        <li>
+                            <a href="#phonein">手机用户</a>
+                        </li>
+                    </ul>
+                    
+                    <div id="box2">
+                        <div id="emailin">
+                            <p>
+                                <label for="userEamilin" accesskey="n" >邮箱：</label>
+                                <input type="text" id="userEamilin" class="txt" />
+                            </p>
+                            <p>
+                                <label for="userMmin" accesskey="p" >密码：</label>
+                                <input type="password" id="userMmin" class="txt"  />
+                            </p>
+                            <p class="last">
+                                <input type="image" class="btn" src="images/login.jpg"/>
+                            </p>
+                            <p class="last">
+                                <a href="#">忘记密码了?</a>
+                            </p>
+                        </div>
+                        <div id="phonein">
+                            <p>
+                                <label for="userName" accesskey="n" >手机号：</label>
+                                <input type="text" id="userName" class="txt" />
+                            </p>
+                            <p>
+                                <label for="userPwd" accesskey="p" >密码：</label>
+                                <input type="password" id="userPwd" class="txt"  />
+                            </p>
+                            <p class="last">
+                                <input type="image" class="btn" src="images/login.jpg"/>
+                            </p>
+                            <p class="last">
+                                <a href="#">忘记密码了?</a>
+                            </p>
+                        </div>
+                        
+                    </div>
+                    
+                  </fieldset>
+                </form>
+        </div>
+    </div>
+    
+    
+    
+    
+    
+    <iframe src="foot.html" width="100%" frameborder="0" scrolling="no" height="300"></iframe>
+
+</body>
+</html>

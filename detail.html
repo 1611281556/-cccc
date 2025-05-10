@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/global.css">
+    <style>
+        #nav,
+        #mtop,
+        #mbottom {
+            width: 985px;
+            /*内容固定宽度*/
+            margin: 0px auto;
+            /*固定宽度且居中*/
+        }
+
+        #middle #allnav {
+            width: 100%;
+            /*自适应宽度，占据整个屏幕*/
+            height: 39px;
+            background-color: #ff7701;
+        }
+
+        /*中间导航*/
+        #middle #nav {
+            height: 39px;
+        }
+
+        #nav ul li {
+            float: left;
+        }
+
+        #nav ul li a {
+            float: left;
+            /*兼容ie6*/
+            padding: 0px 16px;
+            height: 39px;
+            line-height: 39px;
+            display: block;
+            font-weight: bold;
+            font-size: 15px;
+            color: white;
+        }
+
+        #nav ul li a:hover {
+            background-color: #ff8c00
+        }
+
+        #nav ul li a.category {
+            background-image: url(images/arrow-down.gif);
+            background-repeat: no-repeat;
+            background-position: right;
+        }
+
+        /*中间的上面*/
+        #mtop {
+            overflow: hidden;
+            /*解决浮动塌陷*/
+            margin-bottom: 4px;
+            /*下外边距 和中下保持4px的间隔*/
+        }
+
+        /*导航菜单的二级菜单用到定位*/
+        #nav ul li.menuList {
+            position: relative;
+        }
+
+        #nav ul li.menuList ul {
+            background-color: #ff7701;
+            text-align: center;
+            top: 39px;
+            display: none;
+            /*脱离原文档流*/
+            position: absolute;
+            width: 123px;
+        }
+
+        #nav ul li.menuList:hover ul {
+            display: block;
+        }
+
+        #nav ul li ul li {
+            float: none;
+
+        }
+
+        #nav ul li ul li a {
+            float: none
+        }
+
+        #content {
+            float: left;
+            border: 1px solid rgb(158, 158, 158);
+        }
+
+        .intlo1,
+        .intlo2 {
+            width: 723px;
+            height: 360px;
+            border: 1px solid grey;
+        }
+        .intlo2 {
+            height: 1252px;
+            font-size: 19px;
+        }
+        .intlo1 ul {
+            padding: 10px 0 0 10px;
+            float: left;
+        }
+
+        .intlo1 .eat li {
+            margin: 2px 9px 0 0;
+            float: left;
+
+        }
+
+        .intlo1 ul li span {
+            color: red;
+        }
+
+        #jsh li {
+            margin: 7px 0 5px 10px;
+            width: 310px;
+        }
+
+        .intlo1 p {
+            padding: 10px;
+            height: 50px;
+            line-height: 26px;
+            background-color: rgb(241, 235, 205);
+            border: 1px solid grey;
+        }
+
+        .intlo2 {
+            margin-top: 10px;
+        }
+
+        h2 {
+            text-align: center;
+            height: 40px;
+            line-height: 40px;
+        }
+
+        .intlo2 #tab h2 {
+            text-align: left;
+            height: 40px;
+            line-height: 40px;
+        }
+
+        #menubox {
+            width: 100%;
+            height: 28px;
+            background: url(images/tabbg.gif) no-repeat;
+        }
+
+        #menubox ul li {
+            float: left;
+            width: 117px;
+            height: 27px;
+            text-align: center;
+            line-height: 27px;
+            font-weight: bold;
+            color: black;
+        }
+
+        #tab #tab1 dl dt {
+            float: left;
+            margin-right: 10px;
+            
+        }
+
+        #tab #tab1 dl dt img {
+            height: 150px;
+        }
+
+        #tab #tab1 dl dd {
+            height: 40px;
+            overflow: hidden;
+        }
+
+        #tab #tab1 dl dd:hover {
+            height: auto;
+            cursor: pointer;
+        }
+
+        #tab #tab1 dl dd span {
+            color: orange;
+            font-weight: bold;
+            height: 40px;
+            line-height: 40px;
+            
+        }
+
+        .intlo2 #tab {
+            padding: 15px;
+        }
+
+
+        #mbottom #side {
+            width: 240px;
+            float: right;
+            height: auto;
+        }
+
+        #mbottom #side div:nth-child(1) {
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+        }
+
+        #mbottom #side div:nth-child(2) {
+            padding: 0 15px;
+            border: 1px solid #ccc;
+        }
+
+        #mbottom #side div:nth-child(2) dl {
+            margin-bottom: 10px;
+            border-bottom: 1px dashed #ccc;
+        }
+
+        #mbottom #side div:nth-child(2) .last {
+            border: none;
+        }
+
+        #mbottom #side div:nth-child(3) {
+            margin: 14px 0;
+            padding: 75px 0px 0 75px;
+            border: 1px solid #CCC;
+            height: 80px;
+            background: url(images/pricebg.JPG) no-repeat;
+        }
+
+        #mbottom #side div:nth-child(4) {
+            padding: 0 15px;
+            border: 1px solid rgb(243, 241, 241);
+        }
+
+        #mbottom #side div:nth-child(4) p {
+            float: right;
+            line-height: 40px;
+        }
+
+        #mbottom #side div:nth-child(4) dl {
+            margin-bottom: 14px;
+            padding-left: 14px;
+            height: 70px;
+            border-bottom: 1px dashed #ccc;
+            clear: both;
+        }
+
+        #mbottom #side div:nth-child(4) dl dd {
+            float: left;
+            margin-left: 5px;
+        }
+
+        #mbottom #side div:nth-child(2) {
+            padding: 0 15px;
+            border: 1px solid #ccc;
+        }
+
+        #mbottom #side div:nth-child(3) ul li {
+            line-height: 22px;
+        }
+
+        #mbottom #side div:nth-child(3) a {
+            color: red;
+        }
+
+        #mbottom #side div h2 {
+            padding-left: 15px;
+            height: 40px;
+            line-height: 40px;
+        }
+
+        #mbottom #side div span {
+            font-size: 25px;
+            font-weight: bold;
+            color: orange;
+        }
+
+        div#adv {
+            position: fixed;
+            top: 300px;
+            right: 0px;
+
+        }
+
+        .tab2 {
+            clear: both;
+        }
+
+        th,
+        td {
+            height: 20px;
+            text-align: center;
+            border: 1px solid grey;
+        }
+
+        .tab2 tr th:nth-child(1) {
+            width: 400px;
+        }
+
+        .tab2 tr td:nth-child(n+2) {
+            width: 130px;
+        }
+    </style>
+
+</head>
+
+<body>
+    <iframe src="head.html" width="100%" height="104" scrolling="no" frameborder="0"></iframe>
+    <div id="middle">
+        <div id="allnav">
+            <div id="nav">
+                <ul>
+                    <li class="menuList"><a href="#" class="category">全部商品分类</a>
+                        <ul>
+                            <!--二级菜单-->
+                            <li><a href="#">美食</a></li>
+                            <li><a href="#">旅游</a></li>
+                            <li><a href="#">酒店</a></li>
+                            <li><a href="#">电影</a></li>
+                            <li><a href="#">KTV</a></li>
+                            <li><a href="#">时尚</a></li>
+                            <li><a href="#">生活服务</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">首页</a></li>
+                    <li><a href="#">团购</a></li>
+                    <li><a href="#">美食</a></li>
+                    <li><a href="#">电影</a></li>
+                    <li><a href="#">KTV</a></li>
+                    <li><a href="#">酒店订票</a></li>
+                    <li><a href="#">购物</a></li>
+                    <li><a href="#">品牌特卖</a></li>
+                </ul>
+            </div>
+        </div>
+        <div id="mtop">
+            <div id="content">
+                <div class="intlo1">
+                    <h2>武汉团购>>美食团购>>自助餐>>大鱼铁板烧</h2>
+                    <ul class="eat">
+                        <img src="images/good2.jpg" style="display: block;">
+                        <li><img src="images/view2.jpg" alt=""></li>
+                        <li><img src="images/view3.jpg" alt=""></li>
+                        <li><img src="images/view4.jpg" alt=""></li>
+                        <li><img src="images/view5.jpg" alt=""></li>
+                    </ul>
+                    <ul id="jsh">
+                        <li>团购价：<span>￥149</span></li>
+                        <li>门店价：￥149</li>
+                        <li>剩余时间：14小时40分11秒</li>
+                        <li>已售出：<span>3895</span></li>
+                        <li>消费评分：4.4</li>
+                        <li>已有357人评价</li>
+                        <li>
+                            <p> <span style="color: grey;">仅售149元!价值224元的大渔铁板烧单人可口自助餐</span> <span style="color: grey;">
+                                    与精美菜品的一场冰与火约会,好好慰劳自己吧.</span></p>
+                        </li>
+                        <li> <img src="images/intocart.gif" alt=""></li>
+                    </ul>
+
+                </div>
+                <div class="intlo2">
+                    <div id="menubox">
+                        <ul>
+                            <li><a href="#tab1">商家位置</a></li>
+                            <li><a href="#tab2">团购详情</a></li>
+                            <li><a href="#tab3">美淘推荐</a></li>
+                            <li><a href="#tab4">消费评价</a></li>
+                        </ul>
+                    </div>
+                    <div id="tab">
+                        <div id="tab1">
+                            <h2>商家位置</h2>
+                            <div>
+                                <dl>
+                                    <dt>
+                                        <img src="images/map.jpg">
+                                    </dt>
+                                    <dd><span>大渔铁板烧（汉街万达店）</span><br />
+                                        地址：武昌区汉街一号万达广场4楼4017铺<br />
+                                        电话：027-87126609
+                                    </dd>
+                                    <dd><span>大渔铁板烧...武汉（国际广场店）</span><br />
+                                        地址：江汉区解放大道武汉国际广场B座5楼<br />
+                                        电话：027-85823026
+                                    </dd>
+                                    <dd><span>大渔铁板烧（花园道店）</span><br />
+                                        地址：江汉区青年路308号花园道商业街A-112号<br />
+                                        电话：027-85803792
+                                    </dd>
+                                </dl>
+                            </div>
+                        </div>
+                        <div class="tab2">
+                            <h2>团购详情</h2>
+                            <table  border="1" cellspacing="0" cellpadding="0">
+                                <tr>
+                                    <th>内容</th>
+                                    <th>单价</th>
+                                    <th>数量/规格</th>
+                                    <th>小计</th>
+                                </tr>
+                                <tr>
+                                    <th colspan="4">以下二选一</th>
+                                </tr>
+                                <tr>
+                                    <td>周一至周四午餐晚餐二选一</td>
+                                    <td>168元</td>
+                                    <td>1位</td>
+                                    <td>168元</td>
+                                </tr>
+                                <tr>
+                                    <td>周五至周日午餐晚餐二选一</td>
+                                    <td>168元</td>
+                                    <td>1位</td>
+                                    <td>168元</td>
+                                </tr>
+                                <tr>
+                                    <th colspan="4">其他</th>
+                                </tr>
+                                <tr>
+                                    <td>哈根达斯单球</td>
+                                    <td>28元</td>
+                                    <td>2球</td>
+                                    <td>56元</td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div id="mbottom">
+                <div id="side">
+                    <div>
+                        <h2>热门主题</h2>
+                        <a href="#"><img src="images/hottopic1.jpg" alt=""></a>
+                        <a href="#"><img src="images/hottopic2.jpg" alt=""></a>
+                        <a href="#"><img src="images/hottopic3.jpg" alt=""></a>
+                    </div>
+                    <div>
+                        <h2>热门排行榜</h2>
+                        <dl>
+                            <dt><a href="#"><img src="images/hotbuy1.jpg" alt=""></a></dt>
+                            <dd>【武汉广场】武商摩尔国际电影城单人票</dd>
+                            <dd><span>￥25</span>每天1416人团购</dd>
+                        </dl>
+                        <dl>
+                            <dt><a href="#"><img src="images/hotbuy2.jpg" alt=""></a></dt>
+                            <dd>【3店通用】万达国际影城电影票</dd>
+                            <dd><span>￥25</span>每天1166人团购</dd>
+                        </dl>
+                        <dl class="last">
+                            <dt><a href="#"><img src="images/hotbuy3.jpg" alt=""></a></dt>
+                            <dd>【武汉等】金汉斯烤肉自助餐</dd>
+                            <dd><span>￥46.75</span>每天468人团购</dd>
+                        </dl>
+                    </div>
+                    <div>
+                        <ul>
+                            <li>金汉斯 <a href="#">进行中</a></li>
+                            <li>兰蔻升级版小黑瓶 <a href="#">进行中</a></li>
+                            <li>苹果 iphone 5s <a href="#">进行中</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h2 style="float: left;">最近浏览</h2>
+                        <p>清空</p>
+                        <dl>
+                            <dt style="float: left;" ;><img src="images/lastview1.jpg" alt=""></dt>
+                            <dd>三星最新平板电脑</dd>
+                            <dd><span>￥0</span>
+                                <p class="money">0</p>
+                            </dd>
+                        </dl>
+                        <dl>
+                            <dt style="float: left;" ;><img src="images/lastview1.jpg" alt=""></dt>
+                            <dd>中国广场提供现金卡</dd>
+                            <dd><span>￥50</span>
+                                <p class="money">100</p>
+                            </dd>
+                        </dl>
+                        <dl style="border: none;">
+                            <dt style="float: left;" ;><img src="images/lastview1.jpg" alt=""></dt>
+                            <dd>三星最新平板电脑</dd>
+                            <dd><span>￥46</span>
+                                <p class="money">58</p>
+                            </dd>
+                        </dl>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <iframe src="foot.html" width="100%" scrolling="no" frameborder="0" height="185"></iframe>
+    <div id="adv">
+        <img src="images/ban.jpg" width="100" ;>
+    </div>
+</body>
+
+</html>

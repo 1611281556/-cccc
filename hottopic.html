@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>热门主题页</title>
+    <link href="CSS/hottopic.css" rel="stylesheet" type="text/css">
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        ul li {
+            list-style: none;            
+        }
+        a{
+            text-decoration: none;
+        }
+
+        #box{
+            width: 1440px;
+            height: auto;
+            margin: 0 auto;
+        }
+        #top{
+            width: 1440px;
+            height: 70px;
+            background-color: #999;
+        }
+        #top #img{
+            margin-left: 200px;
+        }
+        #mid div{
+            width: 1014px;
+            height: auto;
+            margin: 0 auto;
+            overflow: hidden;
+        }
+
+        #nav{
+            position: fixed;
+            top: 200px;
+            right: 0px;
+        }
+        #nav li a{
+            display: block;
+            color: black;
+            padding: 5px 25px;
+            line-height: 40px;
+            background-color: #ccc;
+            border-bottom: 1px solid #fea500;
+        }
+        #nav li a:hover{
+            color: #fea500;
+        }
+        #nav li#lieb{
+            background-color: #fea500;
+            padding: 5px 25px;
+            line-height: 40px;
+            border-bottom: 1px solid #fea500;
+        }
+        #top div{
+    float: left;
+}
+#top div ul li{
+    float: left;
+}
+#top div ul li a{
+    display: block;
+    color: #fff;
+    height: 70px;
+    padding: 0 10px;
+    line-height: 70px;
+}
+#top div ul li a:hover{
+    background-color: #676767;
+}
+#top #in{
+    margin-top: 27px;
+    margin-left: 100px;
+    font-size: 13px;
+    color: #fff;
+}
+#top #in a{
+    color: orange;
+}
+
+#mid .zt{
+    background-image: url(images/topic/ztbg.jpg);
+    height: 50px;
+}
+#mid .zt h3{
+    height: 50px;
+    line-height: 50px;
+    margin-left: 42px;
+    color: rgb(255, 255, 255);
+}
+#mid dl{
+    width: 312px;
+    height: 280px;
+    padding: 9px;
+    border: 1px solid #d3d3d3;
+    float: left;
+    margin-right: 9px;
+    margin-bottom: 10px;
+}
+#mid dl.three{
+    margin-right: 0px;
+}
+#mid dl dd{
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+#mid dl dd span{
+    font-size: 20px;
+    color: #efa623;
+}
+#mid dl dd.weit{
+    font-weight: bold;
+    font-size: 16px;
+}
+#mid dl dd.num1{
+    float: left;
+}
+#mid dl dd.num2{
+    float: right;
+}
+    </style>
+</head>
+<body>
+    <div id="box">
+        <div id="top">
+            <div id="img"><img src="images/topic/logo.png"/></div>
+            <div>
+                <ul>
+                    <li><a href="#">首页</a></li>
+                    <li><a href="#">美食</a></li>
+                    <li><a href="#">旅游</a></li>
+                    <li><a href="#">酒店</a></li>
+                    <li><a href="#">电影</a></li>
+                    <li><a href="#">KTV</a></li>
+                    <li><a href="#">时尚</a></li>
+                    <li><a href="#">生活服务</a></li>
+                </ul>
+            </div>
+            <div id="in">欢迎您，请先<a href="#">登录</a></div>            
+        </div>
+
+        <img src="images/topic/banner.png"/>
+
+        <div id="mid">
+            <div id="money">
+                <div class="zt"><h3>豪华酒店</h3></div>
+                <dl>
+                    <dt><a href="#"><img src="images/topic/best1.jpg"/></a></dt>
+                    <dd class="weit">【多城市】艳阳天酒家旅店</dd>
+                    <dd>住宿1晚，12家店任选1种房型，免费提供WiFi</dd>
+                    <dd class="num1"><span>￥139</span>门店价￥234</dd>
+                    <dd class="num2">已售<span>1251</span></dd>
+                </dl>   
+                
+                <dl>
+                    <dt><a href="#"><img src="images/topic/best2.jpg"/></a></dt>
+                    <dd class="weit">【洪山区】纽宾凯光谷国际酒店</dd>
+                    <dd>住宿1晚（高级大床房/高级双床房2选1）</dd>
+                    <dd class="num1"><span>￥200</span>门店价￥1094</dd>
+                    <dd class="num2">已售<span>734</span></dd>
+                </dl> 
+
+                <dl class="three">
+                    <dt><a href="#"><img src="images/topic/best3.jpg"/></a></dt>
+                    <dd class="weit">【钟家村】归元大觉宾舍酒店</dd>
+                    <dd>住宿1晚，美淘券可叠加使用，免费提供WiFi</dd>
+                    <dd class="num1"><span>￥229</span>门店价￥999</dd>
+                    <dd class="num2">已售<span>178</span></dd>
+                </dl> 
+
+                <dl>
+                    <dt><a href="#"><img src="images/topic/best4.jpg"/></a></dt>
+                    <dd class="weit">【武钢厂区/武东】悦邦大酒店</dd>
+                    <dd>住宿1晚（房型3选1），免费提供早餐，可叠加</dd>
+                    <dd class="num1"><span>￥128</span>门店价￥218</dd>
+                    <dd class="num2">已售<span>166</span></dd>
+                </dl> 
+
+                <dl>
+                    <dt><a href="#"><img src="images/topic/best5.jpg"/></a></dt>
+                    <dd class="weit">【白沙洲】九龙大酒店</dd>
+                    <dd>普通大床房住宿1晚，美淘券可叠加使用</dd>
+                    <dd class="num1"><span>￥158</span>门店价￥418</dd>
+                    <dd class="num2">已售<span>121</span></dd>
+                </dl> 
+
+                <dl class="three">
+                    <dt><a href="#"><img src="images/topic/best6.jpg"/></a></dt>
+                    <dd class="weit">【徐东大街】V9国际酒店</dd>
+                    <dd>住宿1晚，房型2选1，周五周六入住需到店另付20元</dd>
+                    <dd class="num1"><span>￥179</span>门店价￥259</dd>
+                    <dd class="num2">已售<span>121</span></dd>
+                </dl> 
+            </div>
+
+            <div id="cheap">
+                <div class="zt"><h3>公惠酒店</h3></div>
+                <dl>
+                    <dt><a href="#"><img src="images/topic/flat1.jpg"/></a></dt>
+                    <dd class="weit">【多城市】艳阳天酒家旅店</dd>
+                    <dd>住宿一晚，12家店任选1种房型，免费提供WiFi</dd>
+                    <dd class="num1"><span>￥139</span>门店价￥234</dd>
+                    <dd class="num2">已售<span>1251</span></dd>
+                </dl>   
+                
+                <dl>
+                    <dt><a href="#"><img src="images/topic/flat2.jpg"/></a></dt>
+                    <dd class="weit">【多城市】艳阳天酒家旅店</dd>
+                    <dd>住宿一晚，12家店任选1种房型，免费提供WiFi</dd>
+                    <dd class="num1"><span>￥139</span>门店价￥234</dd>
+                    <dd class="num2">已售<span>1251</span></dd>
+                </dl> 
+
+                <dl class="three">
+                    <dt><a href="#"><img src="images/topic/flat3.jpg"/></a></dt>
+                    <dd class="weit">【多城市】艳阳天酒家旅店</dd>
+                    <dd>住宿一晚，12家店任选1种房型，免费提供WiFi</dd>
+                    <dd class="num1"><span>￥139</span>门店价￥234</dd>
+                    <dd class="num2">已售<span>1251</span></dd>
+                </dl> 
+
+                <dl>
+                    <dt><a href="#"><img src="images/topic/flat4.jpg"/></a></dt>
+                    <dd class="weit">【多城市】艳阳天酒家旅店</dd>
+                    <dd>住宿一晚，12家店任选1种房型，免费提供WiFi</dd>
+                    <dd class="num1"><span>￥139</span>门店价￥234</dd>
+                    <dd class="num2">已售<span>1251</span></dd>
+                </dl> 
+
+                <dl>
+                    <dt><a href="#"><img src="images/topic/flat5.jpg"/></a></dt>
+                    <dd class="weit">【多城市】艳阳天酒家旅店</dd>
+                    <dd>住宿一晚，12家店任选1种房型，免费提供WiFi</dd>
+                    <dd class="num1"><span>￥139</span>门店价￥234</dd>
+                    <dd class="num2">已售<span>1251</span></dd>
+                </dl> 
+
+                <dl class="three">
+                    <dt><a href="#"><img src="images/topic/flat6.jpg"/></a></dt>
+                    <dd class="weit">【多城市】艳阳天酒家旅店</dd>
+                    <dd>住宿一晚，12家店任选1种房型，免费提供WiFi</dd>
+                    <dd class="num1"><span>￥139</span>门店价￥234</dd>
+                    <dd class="num2">已售<span>1251</span></dd>
+                </dl> 
+            </div>
+
+            <div id="holiday">
+                <div class="zt"><h3>度假首选</h3></div>
+                <dl>
+                    <dt><img src="images/topic/holiday1.jpg"/></dt>
+                    <dd class="weit">【多城市】艳阳天酒家旅店</dd>
+                    <dd>住宿一晚，12家店任选1种房型，免费提供WiFi</dd>
+                    <dd class="num1"><span>￥139</span>门店价￥234</dd>
+                    <dd class="num2">已售<span>1251</span></dd>
+                </dl>   
+                
+                <dl>
+                    <dt><img src="images/topic/holiday2.jpg"/></dt>
+                    <dd class="weit">【多城市】艳阳天酒家旅店</dd>
+                    <dd>住宿一晚，12家店任选1种房型，免费提供WiFi</dd>
+                    <dd class="num1"><span>￥139</span>门店价￥234</dd>
+                    <dd class="num2">已售<span>1251</span></dd>
+                </dl> 
+
+                <dl class="three">
+                    <dt><img src="images/topic/holiday3.jpg"/></dt>
+                    <dd class="weit">【多城市】艳阳天酒家旅店</dd>
+                    <dd>住宿一晚，12家店任选1种房型，免费提供WiFi</dd>
+                    <dd class="num1"><span>￥139</span>门店价￥234</dd>
+                    <dd class="num2">已售<span>1251</span></dd>
+                </dl> 
+
+                <dl>
+                    <dt><img src="images/topic/holiday4.jpg"/></dt>
+                    <dd class="weit">【多城市】艳阳天酒家旅店</dd>
+                    <dd>住宿一晚，12家店任选1种房型，免费提供WiFi</dd>
+                    <dd class="num1"><span>￥139</span>门店价￥234</dd>
+                    <dd class="num2">已售<span>1251</span></dd>
+                </dl> 
+
+                <dl>
+                    <dt><img src="images/topic/holiday5.jpg"/></dt>
+                    <dd class="weit">【多城市】艳阳天酒家旅店</dd>
+                    <dd>住宿一晚，12家店任选1种房型，免费提供WiFi</dd>
+                    <dd class="num1"><span>￥139</span>门店价￥234</dd>
+                    <dd class="num2">已售<span>1251</span></dd>
+                </dl> 
+                <dl class="three">
+                    <dt><img src="images/topic/holiday6.jpg"/></dt>
+                    <dd class="weit">【多城市】艳阳天酒家旅店</dd>
+                    <dd>住宿一晚，12家店任选1种房型，免费提供WiFi</dd>
+                    <dd class="num1"><span>￥139</span>门店价￥234</dd>
+                    <dd class="num2">已售<span>1251</span></dd>
+                </dl> 
+            </div>
+
+            <div id="love">
+                <div class="zt"><h3>经济有爱</h3></div>
+                <dl>
+                    <dt><img src="images/topic/love1.jpg"/></dt>
+                    <dd class="weit">【多城市】艳阳天酒家旅店</dd>
+                    <dd>住宿一晚，12家店任选1种房型，免费提供WiFi</dd>
+                    <dd class="num1"><span>￥139</span>门店价￥234</dd>
+                    <dd class="num2">已售<span>1251</span></dd>
+                </dl>   
+                
+                <dl>
+                    <dt><img src="images/topic/love2.jpg"/></dt>
+                    <dd class="weit">【多城市】艳阳天酒家旅店</dd>
+                    <dd>住宿一晚，12家店任选1种房型，免费提供WiFi</dd>
+                    <dd class="num1"><span>￥139</span>门店价￥234</dd>
+                    <dd class="num2">已售<span>1251</span></dd>
+                </dl> 
+
+                <dl class="three">
+                    <dt><img src="images/topic/love3.jpg"/></dt>
+                    <dd class="weit">【多城市】艳阳天酒家旅店</dd>
+                    <dd>住宿一晚，12家店任选1种房型，免费提供WiFi</dd>
+                    <dd class="num1"><span>￥139</span>门店价￥234</dd>
+                    <dd class="num2">已售<span>1251</span></dd>
+                </dl> 
+
+                <dl>
+                    <dt><img src="images/topic/love4.jpg"/></dt>
+                    <dd class="weit">【多城市】艳阳天酒家旅店</dd>
+                    <dd>住宿一晚，12家店任选1种房型，免费提供WiFi</dd>
+                    <dd class="num1"><span>￥139</span>门店价￥234</dd>
+                    <dd class="num2">已售<span>1251</span></dd>
+                </dl> 
+                <dl>
+                    <dt><img src="images/topic/love5.jpg"/></dt>
+                    <dd class="weit">【多城市】艳阳天酒家旅店</dd>
+                    <dd>住宿一晚，12家店任选1种房型，免费提供WiFi</dd>
+                    <dd class="num1"><span>￥139</span>门店价￥234</dd>
+                    <dd class="num2">已售<span>1251</span></dd>
+                </dl> 
+
+                <dl class="three">
+                    <dt><img src="images/topic/love6.jpg"/></dt>
+                    <dd class="weit">【多城市】艳阳天酒家旅店</dd>
+                    <dd>住宿一晚，12家店任选1种房型，免费提供WiFi</dd>
+                    <dd class="num1"><span>￥139</span>门店价￥234</dd>
+                    <dd class="num2">已售<span>1251</span></dd>
+                </dl> 
+            </div>
+
+            <div id="inn">
+                <div class="zt"><h3>客栈情怀</h3></div>
+                <dl>
+                    <dt><img src="images/topic/inn1.jpg"/></dt>
+                    <dd class="weit">【多城市】艳阳天酒家旅店</dd>
+                    <dd>住宿一晚，12家店任选1种房型，免费提供WiFi</dd>
+                    <dd class="num1"><span>￥139</span>门店价￥234</dd>
+                    <dd class="num2">已售<span>1251</span></dd>
+                </dl>   
+                
+                <dl>
+                    <dt><img src="images/topic/inn2.jpg"/></dt>
+                    <dd class="weit">【多城市】艳阳天酒家旅店</dd>
+                    <dd>住宿一晚，12家店任选1种房型，免费提供WiFi</dd>
+                    <dd class="num1"><span>￥139</span>门店价￥234</dd>
+                    <dd class="num2">已售<span>1251</span></dd>
+                </dl> 
+
+                <dl class="three">
+                    <dt><img src="images/topic/inn3.jpg"/></dt>
+                    <dd class="weit">【多城市】艳阳天酒家旅店</dd>
+                    <dd>住宿一晚，12家店任选1种房型，免费提供WiFi</dd>
+                    <dd class="num1"><span>￥139</span>门店价￥234</dd>
+                    <dd class="num2">已售<span>1251</span></dd>
+                </dl> 
+
+                <dl>
+                    <dt><img src="images/topic/inn4.jpg"/></dt>
+                    <dd class="weit">【多城市】艳阳天酒家旅店</dd>
+                    <dd>住宿一晚，12家店任选1种房型，免费提供WiFi</dd>
+                    <dd class="num1"><span>￥139</span>门店价￥234</dd>
+                    <dd class="num2">已售<span>1251</span></dd>
+                </dl> 
+
+                <dl>
+                    <dt><img src="images/topic/inn5.jpg"/></dt>
+                    <dd class="weit">【多城市】艳阳天酒家旅店</dd>
+                    <dd>住宿一晚，12家店任选1种房型，免费提供WiFi</dd>
+                    <dd class="num1"><span>￥139</span>门店价￥234</dd>
+                    <dd class="num2">已售<span>1251</span></dd>
+                </dl> 
+
+                <dl class="three">
+                    <dt><img src="images/topic/inn6.jpg"/></dt>
+                    <dd class="weit">【多城市】艳阳天酒家旅店</dd>
+                    <dd>住宿一晚，12家店任选1种房型，免费提供WiFi</dd>
+                    <dd class="num1"><span>￥139</span>门店价￥234</dd>
+                    <dd class="num2">已售<span>1251</span></dd>
+                </dl> 
+            </div>
+        </div>     
+
+
+    </div>
+
+    <ul id="nav">
+        <li id="lieb">产品分类</li>
+        <li><a href="#money">豪华酒店</a></li>
+        <li><a href="#cheap">公惠酒店</a></li>
+        <li><a href="#holiday">度假首选</a></li>
+        <li><a href="#love">经济有爱</a></li>
+        <li><a href="#inn">客栈情怀</a></li>
+        <li><a href="#top">返回顶部</a></li>
+    </ul>
+    
+</body>
+</html>
